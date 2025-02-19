@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Clubs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #FFC72C;
+            --background-color: #f4f6f9;
+            --accent-color: #00509E;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: #222;
+        }
+
+        header, footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        #hero {
+             background: url('flame.jpg') no-repeat center center/cover; //comment add picture here 
+            color: #fff;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #222;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .club-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .club {
+            flex-basis: calc(25% - 40px);
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--accent-color);
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .club img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .club h3 {
+            margin-top: 10px;
+            color: var(--secondary-color);
+        }
+
+        .club p {
+            color: #f4f4f4;
+        }
+
+        .club:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .upcoming-events {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .upcoming-events h2 {
+            color: var(--secondary-color);
+        }
+
+        .event {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            max-width: 600px;
+        }
+    </style>
+    <script>
+        function joinClub(clubName) {
+            alert(`Congratulations! You have joined the ${clubName}.`);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="color: var(--secondary-color);">Welcome to FLAME Clubs</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#clubs">Clubs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Explore University Life Through Our Clubs!</h2>
+        <p>Discover exciting opportunities to learn, engage, and grow through student communities.</p>
+        <a href="#clubs" class="cta-button">Explore Clubs</a>
+    </section>
+
+    <section id="clubs">
+        <h2>Our Clubs</h2>
+        <div class="club-list">
+            <div class="club" onclick="joinClub('Art Club')"><img src="art.png"><h3>Art Club</h3><p>Express yourself creatively through various art forms.</p></div>
+            <div class="club" onclick="joinClub('Dance Club')"><img src="dance.png"><h3>Dance Club</h3><p>Move to the rhythm and showcase your dance talent.</p></div>
+            <div class="club" onclick="joinClub('Animal Welfare Committee')"><img src="dog.png"><h3>Animal Welfare Committee</h3><p>Promote humane treatment and care for animals.</p></div>
+            <div class="club" onclick="joinClub('Psychology Club')"><img src="psych.png"><h3>Psychology Club</h3><p>Delve into the mysteries of the human mind.</p></div>
+            <div class="club" onclick="joinClub('Astronomy Club')"><img src="astronomy.png"><h3>Astronomy Club</h3><p>Discover the wonders of the universe and stargazing.</p></div>
+            <div class="club" onclick="joinClub('Theatre Club')"><img src="theatre.png"><h3>Theatre Club</h3><p>Bring stories to life through stage performances.</p></div>
+            <div class="club" onclick="joinClub('Sports Club')"><img src="sports.png"><h3>Sports Club</h3><p>Stay active and compete in various sports events.</p></div>
+            <div class="club" onclick="joinClub('Literary Club')"><img src="literary.png"><h3>Literary Club</h3><p>Celebrate the art of words through writing and reading.</p></div>
+        </div>
+    </section>
+
+    <section class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <h3>Open Mic Night</h3>
+            <p>Date: March 15, 2025</p>
+            <p>Location: Student Lounge</p>
+        </div>
+        <div class="event">
+            <h3>Inter-College Debate</h3>
+            <p>Date: March 22, 2025</p>
+            <p>Location: Auditorium</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FLAME University. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
